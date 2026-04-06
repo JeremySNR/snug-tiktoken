@@ -1,0 +1,51 @@
+{
+  "name": "@jeremysnr/snug-tiktoken",
+  "version": "0.1.1",
+  "description": "snug pre-wired with tiktoken. Zero config token counting for OpenAI and Anthropic models.",
+  "keywords": [
+    "llm",
+    "tokens",
+    "context-window",
+    "tiktoken",
+    "openai",
+    "anthropic"
+  ],
+  "license": "MIT",
+  "author": "Jeremy Smith",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremySNR/snug-tiktoken.git"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "node node_modules/jest/bin/jest.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@jeremysnr/snug": "^0.1.0",
+    "tiktoken": "^1.0.22"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "tsup": "^8.5.1",
+    "typescript": "^5.5.0"
+  }
+}
