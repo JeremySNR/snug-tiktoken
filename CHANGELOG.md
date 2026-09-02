@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Encoders are now cached in a module-level map keyed by model or encoding instead of being created and freed on every `fit()` call.
-- Requires `@jeremysnr/snug` ^0.2.0.
+- Accepts `@jeremysnr/snug` 0.1.x or 0.2.x (`>=0.1.0 <0.3.0`). Nothing here needs the 0.2.0 additions yet.
 - Documentation no longer claims the default encoding is accurate for Anthropic models, or that `gpt-4o` uses `cl100k_base`. The default with no `model` is `cl100k_base`; pass `model` for the exact OpenAI encoding (`gpt-4o` uses `o200k_base`); counts for Anthropic models are approximate because Claude has its own tokenizer.
 
 ## [0.1.1] - 2026-04-06
